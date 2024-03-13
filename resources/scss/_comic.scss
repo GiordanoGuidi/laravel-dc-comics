@@ -1,0 +1,138 @@
+.separator {
+    height: 50px;
+    background-color: #0182F9;
+    position: relative;
+}
+
+.wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.comic-container {
+    width: 60%;
+    margin: 0 auto;
+
+    .thumb {
+        position: absolute;
+        bottom: 10px;
+        z-index: 3;
+    }
+}
+
+#comic-details {
+    background-color: #FFFFFF;
+
+    .row {
+        display: flex;
+    }
+
+    .col-70 {
+        width: 70%;
+    }
+
+    .col-30 {
+        width: 30%;
+
+        img {
+            width: 100%;
+        }
+
+        .advertisement-text {
+            text-align: end;
+            margin-bottom: 5px;
+            color: gray;
+        }
+
+
+    }
+
+    .row .availability-bar {
+        background-color: #55BA58;
+        display: flex;
+        margin: 20px 0px;
+        border-bottom: 1px solid black;
+
+
+        .big-col {
+            border-right: 1px solid black;
+            flex-grow: 1;
+        }
+
+        p {
+            padding: 20px 30px;
+
+        }
+
+
+        .price-status {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+#comic-info {
+    background-color: #F6F6F6;
+    height: 500px;
+    position: relative;
+    z-index: 2;
+
+    .row {
+        display: flex;
+
+        a {
+            color: #0A80F9;
+            font-size: 0.9rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    .col-30 {
+        flex-basis: 30%;
+    }
+
+    .col-70 {
+        flex-basis: 70%;
+    }
+
+    .col-50 {
+        flex-basis: 50%;
+    }
+
+    .art-by {
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+
+        p {
+            text-align: start;
+        }
+    }
+
+    .witten-by.p {
+        text-align: start;
+    }
+
+
+    .dc-shop {
+        height: 70px;
+        border-top: 1px solid #A8ABBC;
+
+        .col-25 {
+            flex-basis: 25%;
+
+            h4 {
+                color: #A8ABBC;
+                padding: 15px;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
