@@ -29,8 +29,8 @@ Route::get('comics/{index}', function ($index) {
     if (!is_numeric($index) || $index < 0 || $index >= count($comics)) {
         abort(404);
     }
-    return view('products.show', ['comic' => $comics[$index]]);
-})->name('products.show');
+    return view('comics.show', ['comic' => $comics[$index]]);
+})->name('comics.show');
 
 //Rotta Characters
 Route::get('/characters', function () {
