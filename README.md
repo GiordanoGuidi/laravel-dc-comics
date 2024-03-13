@@ -11,6 +11,6 @@ Iniziate a definire le prime operazioni CRUD con le relative view:
 - index()
 - show()
 #### Bonus
-Qualunque cosa a piacere delle varie che abbiamo visto :faccia_leggermente_sorridente:
+Qualunque cosa a piacere delle varie che abbiamo visto
 Buon divertimento!
 
