@@ -15,10 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Rotta Comics
-Route::get('/comics', function () {
+Route::get('/', function () {
     $comics = config('comics');
-    return view('comics', compact('comics'));
-})->name('comics');
+    return view('home', compact('comics'));
+})->name('home');
 
 //Rotta Comics Details
 Route::get('comics/{index}', function ($index) {
