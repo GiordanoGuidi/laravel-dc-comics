@@ -10,6 +10,7 @@
         <section id="comics-list" class="small-container card-container">
             <button class="series">CURRENT SERIES</button>
             <button class="load">LOAD MORE</button>
+            <a href="{{route('comics.create')}}" class="create-comic">CREATE COMIC</a>
             <ul class="cards-list">
                 @foreach ( $comics as $comic )
                 <!--SINGLE-CARD-->

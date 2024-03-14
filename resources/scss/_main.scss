@@ -40,6 +40,18 @@ button.load {
     transform: translate(-50%, -50%);
 }
 
+.create-comic {
+    position: absolute;
+    padding: 10px 40px;
+    bottom: 0;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+
+
 .cards-list {
     display: flex;
     list-style: none;

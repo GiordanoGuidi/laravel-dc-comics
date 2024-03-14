@@ -21,9 +21,6 @@ Route::get('/', function () {
     return view('home', compact('comics'));
 })->name('home');
 
-//Rotta Comics Details
-Route::get('comics/{comic}', [ComicController::class, 'show'])->name('comics.show');
-
 // Rotta Comics List
 Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
 
@@ -33,4 +30,7 @@ Route::get('/characters', function () {
 })->name('characters');
 
 //Rotta Create Comic
-Route::get('comics/create', [ComicController::class, 'create'])->name('comics.create');
+Route::get('/comics/create', [ComicController::class, 'create'])->name('comics.create');
+
+//Rotta Comics Details
+Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.show');
