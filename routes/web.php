@@ -21,16 +21,18 @@ Route::get('/', function () {
     return view('home', compact('comics'));
 })->name('home');
 
-Route::get('/comics.index', [ComicController::class, 'index'])->name('comics.index');
+Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
 
 //Rotta Comics Details
-Route::get('comics/{index}', function ($index) {
-    $comics = config('comics');
-    if (!is_numeric($index) || $index < 0 || $index >= count($comics)) {
-        abort(404);
-    }
-    return view('comics.show', ['comic' => $comics[$index]]);
-})->name('comics.show');
+Route::get('comics/{comic}', [ComicController::class, 'show'])->name('comics.show');
+
+// function ($index) {
+//     $comics = config('comics');
+//     if (!is_numeric($index) || $index < 0 || $index >= count($comics)) {
+//         abort(404);
+//     }
+//     return view('comics.show', ['comic' => $comics[$index]]);
+// }
 
 //Rotta Characters
 Route::get('/characters', function () {

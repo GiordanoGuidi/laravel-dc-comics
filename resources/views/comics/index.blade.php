@@ -6,6 +6,7 @@
 @section('main-content')
 {{--Main--}}
     <!--CARDS-CONTAINER-->
+    @dd($comics);
     <div class="comics-container">
         <section id="comics-list" class="small-container card-container">
             <button class="series">CURRENT SERIES</button>
@@ -14,7 +15,7 @@
                 @foreach ( $comics as $index => $comic )
                 <!--SINGLE-CARD-->
                 <li class="comic-book-card">
-                    <a href="{{route('comics.show',$index)}}">
+                    <a href="{{route('comics.show',$comic)}}">
                         <div class="thumb">
                             <img src="{{$comic['thumb']}}" alt="{{$comic['title']}}">
                         </div>

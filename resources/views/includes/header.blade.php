@@ -11,7 +11,7 @@
         <ul class="links-list">
             @foreach(config('header_links') as $link)
             <li @if(Route::is($link['text'] . '.index')) class="active" @endif>
-                <a href="{{$link['text'] . '.index'}}">
+                <a href="{{$link['text']}}">
                     {{strtoupper($link['text'])}}</a>
                 </li>
         @endforeach
