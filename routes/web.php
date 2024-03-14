@@ -31,3 +31,6 @@ Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
 Route::get('/characters', function () {
     return view('characters');
 })->name('characters');
+
+//Rotta Create Comic
+Route::get('comics/create', [ComicController::class, 'create'])->name('comics.create');
