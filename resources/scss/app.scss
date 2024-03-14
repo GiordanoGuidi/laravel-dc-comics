@@ -1,4 +1,3 @@
-// @import '~bootstrap/scss/bootstrap';
 @use 'vars';
 @use 'generics';
 @use 'utils';
@@ -8,3 +7,4 @@
 @use 'comic';
 @use 'footer';
 @use 'reset';
+@import '~bootstrap/scss/bootstrap';
