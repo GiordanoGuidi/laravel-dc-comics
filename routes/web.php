@@ -15,24 +15,17 @@ use App\Http\Controllers\ComicController;
 |
 */
 
-//Rotta Comics
+//Rotta Home
 Route::get('/', function () {
     $comics = config('comics');
     return view('home', compact('comics'));
 })->name('home');
 
-Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
-
 //Rotta Comics Details
 Route::get('comics/{comic}', [ComicController::class, 'show'])->name('comics.show');
 
-// function ($index) {
-//     $comics = config('comics');
-//     if (!is_numeric($index) || $index < 0 || $index >= count($comics)) {
-//         abort(404);
-//     }
-//     return view('comics.show', ['comic' => $comics[$index]]);
-// }
+// Rotta Comics List
+Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
 
 //Rotta Characters
 Route::get('/characters', function () {

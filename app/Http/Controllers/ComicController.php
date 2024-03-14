@@ -21,4 +21,8 @@ class ComicController extends Controller
         $comics = config('comics');
         return view('comics.show', compact('comic'));
     }
+
+    public function create()
+    {
+    }
 }
