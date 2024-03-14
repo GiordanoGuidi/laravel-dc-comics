@@ -11,7 +11,8 @@
                 <h1>Create Comic</h1>
                 <a class="btn btn-secondary" href="{{route('comics.index')}}">Torna Indietro</a>
             </div>
-            <form action="" method="">
+            <form action="{{route('comics.store')}}" method="POST">
+                @csrf
                 <!--Title-->
                 <div class="mb-3">
                     <label for="title" class="form-label">Titolo</label>
