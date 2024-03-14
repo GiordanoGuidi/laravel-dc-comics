@@ -55,12 +55,12 @@
                      <p>Art by:</p>
                   </div>
                   <div class="col-70">
-                     @foreach ($comic['artists'] as $artist ) 
-                     <a href="#">{{$artist}}</a>
-                     @if (!$loop->last)
+                     {{-- @foreach ($comic['artists'] as $artist )  --}}
+                     <a href="#">{{$comic['artist']}}</a>
+                     {{-- @if (!$loop->last)
                      ,
                      @endif
-                     @endforeach
+                     @endforeach --}}
                   </div>
                </div>
                <div class="row border-b p-tb-5">
@@ -68,12 +68,12 @@
                      <p>Written by:</p>
                   </div>
                   <div class="col-70">
-                     @foreach ($comic['writers'] as $writer ) 
-                     <a href="#">{{$writer}}</a>
-                     @if (!$loop->last)
+                     {{-- @foreach ($comic['writers'] as $writer )  --}}
+                     <a href="#">{{$comic['writers']}}</a>
+                     {{-- @if (!$loop->last)
                      ,
                      @endif
-                     @endforeach
+                     @endforeach --}}
                   </div>
                </div>
             </div>

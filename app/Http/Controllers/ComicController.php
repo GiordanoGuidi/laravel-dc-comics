@@ -18,10 +18,7 @@ class ComicController extends Controller
     //Funzione per mostare il singolo fumetto
     public function show(Comic $comic)
     {
-        // $comics = config('comics');
-        //     if (!is_numeric($index) || $index < 0 || $index >= count($comics)) {
-        //         abort(404);
-        //     }
-        //     return view('comics.show', ['comic' => $comics[$index]]);
+        $comics = config('comics');
+        return view('comics.show', compact('comic'));
     }
 }
