@@ -16,51 +16,51 @@
                 <!--Title-->
                 <div class="mb-3">
                     <label for="title" class="form-label">Titolo</label>
-                    <input type="text" name="title" class="form-control" id="title" placeholder="title">
+                    <input type="text" name="title" class="form-control" id="title" placeholder="title" value="{{old('title', '')}}">
                 </div>
                 <!--Description-->
                   <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
-                    <textarea class="form-control" name="description" id="description" rows="3"></textarea>
+                    <textarea class="form-control" name="description" id="description" rows="3">{{old('description', '')}}</textarea>
                   </div>
                 <!--Thumb-->
                 <div class="mb-3">
                     <label for="thumb" class="form-label">Thumb</label>
-                    <input type="text" class="form-control" name="thumb" id="thumb" placeholder="url">
+                    <input type="text" class="form-control" name="thumb" id="thumb" placeholder="url" value="{{old('thumb', '')}}">
                 </div>
                 <!--Price-->
                 <div class="mb-3">
                     <label for="price" class="form-label">Price</label>
-                    <input type="text" class="form-control" name="price" id="price" placeholder="$">    
+                    <input type="text" class="form-control" name="price" id="price" placeholder="$" value="{{old('price', '')}}">    
                 </div>
                 <!--Series-->
                 <div class="mb-3">
                     <label for="series" class="form-label">Series</label>
-                    <input type="text" class="form-control" name="series" id="series" placeholder="series">    
+                    <input type="text" class="form-control" name="series" id="series" placeholder="series" value="{{old('series', '')}}">    
                 </div>
                 <!--Sale Date-->
                 <div class="mb-3">
                     <label for="sale_date" class="form-label">Sale Date</label>
-                    <input type="date" class="form-control" name="date" id="sale_date" placeholder="Date">    
+                    <input type="date" class="form-control" name="date" id="sale_date" placeholder="Date" value="{{old('sale_date', '')}}">    
                 </div>
                 <!--Type-->
                 <div class="mb-3">
                     <label for="type" class="form-label">Type</label>
-                    <input type="text" class="form-control" name="type" id="type" placeholder="Type">    
+                    <input type="text" class="form-control" name="type" id="type" placeholder="Type" value="{{old('type', '')}}">    
                 </div>
                 <!--Artists-->
                 <div class="mb-3">
                     <label for="artists" class="form-label">Artists</label>
-                    <input type="text" class="form-control" name="artists" id="artists" placeholder="artists">    
+                    <input type="text" class="form-control" name="artists" id="artists" placeholder="artists" value="{{old('artists', '')}}">    
                 </div>
                 <!--Writers-->
                 <div class="mb-3">
                     <label for="writers" class="form-label">Writers</label>
-                    <input type="text" class="form-control" name="writers" id="writers" placeholder="writers">    
+                    <input type="text" class="form-control" name="writers" id="writers" placeholder="writers" value="{{old('writers', '')}}">    
                 </div>
                 <div class="d-flex justify-content-center gap-3 my-3">
-                    <button  class="btn btn-primary">Svuota i campi</button>
-                    <button class="btn btn-primary">Crea</button>
+                    <button  class="btn btn-primary" type="reset">Svuota i campi</button>
+                    <button class="btn btn-primary">Salva</button>
                 </div>
             </form>
         </div>

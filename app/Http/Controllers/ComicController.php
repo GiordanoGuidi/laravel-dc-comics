@@ -6,6 +6,8 @@ use App\Models\Comic;
 
 use Illuminate\Http\Request;
 
+use function Laravel\Prompts\error;
+
 class ComicController extends Controller
 {
     //Funzione per mostare la lista dei fumetti
@@ -28,7 +30,18 @@ class ComicController extends Controller
 
     public function store(Request $request)
     {
-        $data = $request->all();
+        $data = $request->validate([
+            'title' => 'required|string|unique:comics',
+            'description' => 'nullable|string',
+            'thumb' => 'url:http,https',
+            'price' => 'string|required',
+            'series' => 'string|required',
+            'sale_date' => 'nullable|date',
+            'type' => 'required|string',
+            'artists' => 'required|string',
+            'writers' => 'required|string',
+        ]);
+        // $data = $request->all();
         $comic = new Comic();
         $comic->fill($data);
         $comic->save();
