@@ -21,7 +21,7 @@
                     </ul>
                 </div>
             @endif
-            <form action="{{route('comics.store')}}" method="POST">
+            <form action="{{route('comics.update', $comic->id)}}" method="POST">
                 @csrf
                 @method('PUT')
                 <!--Title-->

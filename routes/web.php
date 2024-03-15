@@ -41,3 +41,6 @@ Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.sh
 
 //Rotta per modificare un fumetto
 Route::get('/comics/{comic}/edit', [ComicController::class, 'edit'])->name('comics.edit');
+
+//Rotta per salvare sul db le modifiche del fumetto
+Route::put('/comics/{comic}', [ComicController::class, 'update'])->name('comics.update');
