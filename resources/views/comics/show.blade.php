@@ -1,6 +1,6 @@
 <div>
    @extends('layouts.main')
-   @section('title', 'Comic')
+   @section('title', 'Dettaglio Fumetto')
 
    @section('main-content')
    <div class="separator">
