@@ -8,9 +8,9 @@
     <nav class="small-container">
         <img src="{{Vite::asset('resources/img/dc-logo.png')}}" alt="">
         <!--LINKS-LIST-->
-        <ul class="links-list">
+        <ul class="links-list mb-0">
             @foreach(config('header_links') as $link)
-            <li @if(Route::is($link['text'] . '.index')) class="active" @endif>
+            <li @if(Request::is($link['text'] . '*')) class="active" @endif>
                 <a href="{{$link['text']}}">
                     {{strtoupper($link['text'])}}</a>
                 </li>

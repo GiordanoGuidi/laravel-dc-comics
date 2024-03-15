@@ -13,7 +13,7 @@
    <!-- Comic-Details -->
    <section id="comic-details">
       <div class="comic-container">
-         <div class="row d-flex gap-40 m-4rem">
+         <div class="row d-flex gap-40 my-5 flex-nowrap">
             <div class="col-70">
                <h2>ACTION COMICS #1000: THE DELUXE EDITION</h2>
                <!--Availability-Bar-->
@@ -42,12 +42,15 @@
                <img src="{{Vite::asset('resources/img/adv.jpg')}}" alt="">
             </div>
          </div>
+         <div class="text-center mb-3">
+            <a href="{{route('comics.index')}}" class="btn btn-secondary cursor-pointer">Torna indietro</a>
+         </div>
       </div>
    </section>
    <!--Comic Info-->
    <section id="comic-info">
       <div class="wrapper">
-         <div class="row comic-container gap-40">
+         <div class="row comic-container gap-40 mx-auto">
             <div class="col-50">
                <h3 class="border-b p-tb-30">Talent</h3>
                <div class="row border-b p-tb-5">
@@ -122,9 +125,7 @@
                <div class="col-25 border-l border-r">
                   <h4>SUBSCRIPTIONS</h4>
                </div>
-
             </div>
-            
          </div>
       </div>
       </section>

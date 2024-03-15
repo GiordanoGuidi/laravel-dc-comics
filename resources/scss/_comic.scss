@@ -26,10 +26,6 @@
 #comic-details {
     background-color: #FFFFFF;
 
-    .row {
-        display: flex;
-    }
-
     .col-70 {
         width: 70%;
     }
@@ -83,6 +79,7 @@
 
     .row {
         display: flex;
+        flex-wrap: nowrap;
 
         a {
             color: #0A80F9;
