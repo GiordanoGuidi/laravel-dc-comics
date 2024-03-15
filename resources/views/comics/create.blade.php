@@ -25,7 +25,7 @@
                   </div>
                 <!--Thumb-->
                 <div class="mb-3">
-                    <label for="thumb" class="form-label">Email address</label>
+                    <label for="thumb" class="form-label">Thumb</label>
                     <input type="text" class="form-control" name="thumb" id="thumb" placeholder="url">
                 </div>
                 <!--Price-->

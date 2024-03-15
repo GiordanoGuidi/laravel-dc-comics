@@ -18,7 +18,6 @@ class ComicController extends Controller
     //Funzione per mostare il singolo fumetto
     public function show(Comic $comic)
     {
-        $comics = config('comics');
         return view('comics.show', compact('comic'));
     }
     // Funzione che mostra pagina per creare Comic
@@ -33,5 +32,7 @@ class ComicController extends Controller
         $comic = new Comic();
         $comic->fill($data);
         $comic->save();
+
+        return to_route('comics.show', $comic->id);
     }
 }

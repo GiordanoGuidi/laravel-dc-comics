@@ -32,8 +32,9 @@ Route::get('/characters', function () {
 //Rotta Create Comic
 Route::get('/comics/create', [ComicController::class, 'create'])->name('comics.create');
 
-//Rotta Comics Details
-Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.show');
 
 //Rotta per salvare sul db il comic creato
 Route::post('/comics', [ComicController::class, 'store'])->name('comics.store');
+
+//Rotta Comics Details
+Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.show');

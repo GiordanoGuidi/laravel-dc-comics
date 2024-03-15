@@ -35,7 +35,7 @@
                      </div>
                </div>
                <!--Description-->
-               <p class="description">The celebration of 1,000 issues of Action Comics continues with a new, Deluxe Edition of the amazing comic tha won raves when it hit comics shop in April! This hardcover includes all the stories from that issues, plus the table by writer Paul Levitz and artist Neal Adams that appeared in the action Comics: 80 Years of Superman hardcover, as well as all the variant covers, design sketches by Jim Lee for Superman's neew look, scripts for the stories,the original art from the lost story featuring art by Curt Swan and more! Plus: a complete reprint of the stories that started it all-the Superman stories Action Comics #1 and 2 from 1938!</p>
+               <p class="description">{{$comic->description}}</p>
             </div>
             <div class="col-30">
                <p class="advertisement-text">ADVERTISEMENT</p>
