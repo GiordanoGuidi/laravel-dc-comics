@@ -48,4 +48,10 @@ class ComicController extends Controller
 
         return to_route('comics.show', $comic->id);
     }
+
+
+    public function edit()
+    {
+        return view('comics.edit');
+    }
 }

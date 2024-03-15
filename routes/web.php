@@ -21,20 +21,23 @@ Route::get('/', function () {
     return view('home', compact('comics'));
 })->name('home');
 
-// Rotta Comics List
+// Rotta per lista fumetti
 Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
 
-//Rotta Characters
+//Rotta per lista personaggi
 Route::get('/characters', function () {
     return view('characters');
 })->name('characters');
 
-//Rotta Create Comic
+//Rotta per creazione fumetto
 Route::get('/comics/create', [ComicController::class, 'create'])->name('comics.create');
 
 
 //Rotta per salvare sul db il comic creato
 Route::post('/comics', [ComicController::class, 'store'])->name('comics.store');
 
-//Rotta Comics Details
+//Rotta per il singolo fumetto
 Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.show');
+
+//Rotta per modificare un fumetto
+Route::get('/comics/{comic}/edit', [ComicController::class, 'edit'])->name('comics.edit');

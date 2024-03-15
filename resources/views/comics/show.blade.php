@@ -43,7 +43,7 @@
             </div>
          </div>
          <div class="d-flex justify-content-center gap-3 mb-3">
-            <a href="" class="btn btn-warning cursor pointer">Modifica</a>
+            <a href="{{route('comics.edit',$comic->id)}}" class="btn btn-warning cursor pointer">Modifica</a>
             <a href="{{route('comics.index')}}" class="btn btn-secondary cursor-pointer">Torna indietro</a>
          </div>
       </div>
