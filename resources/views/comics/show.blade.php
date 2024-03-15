@@ -42,7 +42,8 @@
                <img src="{{Vite::asset('resources/img/adv.jpg')}}" alt="">
             </div>
          </div>
-         <div class="text-center mb-3">
+         <div class="d-flex justify-content-center gap-3 mb-3">
+            <a href="" class="btn btn-warning cursor pointer">Modifica</a>
             <a href="{{route('comics.index')}}" class="btn btn-secondary cursor-pointer">Torna indietro</a>
          </div>
       </div>
