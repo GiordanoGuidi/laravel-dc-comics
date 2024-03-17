@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <div class="col-1">
-                        <img class="img-fluid" src="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=" alt="">
+                        <img class="img-fluid" id="preview" src="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=" alt="">
                     </div>
                     <!--Price-->
                     <div class="col-6 p-2">
@@ -103,9 +103,18 @@
                 </form>
             </div>
         </div>
-
-
     </section>
+@endsection
+@section('scripts')
+<script>
+const placeholder = 'https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM='
+const thumbInput= document.getElementById('thumb')
+const preview= document.getElementById('preview')
+thumbInput.addEventListener('input', () => {
+    const url= thumbInput.value;
+    preview.src= url ? url : placeholder;
+})
+</script>
 @endsection
 
 
