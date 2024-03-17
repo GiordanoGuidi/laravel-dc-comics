@@ -15,16 +15,7 @@
                     <a class="btn btn-secondary" href="{{route('comics.index')}}">Torna Indietro</a>
                 </div>
             </div>
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <h4>Some fileds are invalid</h4>
-                    <ul>
-                        @foreach ($errors->all() as $error )
-                        <li>{{$error}}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+            @include('includes.alert')
             <form class="d-flex flex-wrap" action="{{route('comics.update', $comic->id)}}" method="POST">
                 @csrf
                 @method('PUT')
