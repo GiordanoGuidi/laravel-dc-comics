@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Comic;
-
 use Illuminate\Http\Request;
-
 use function Laravel\Prompts\error;
+use Illuminate\Validation\Rule;
+
 
 class ComicController extends Controller
 {
@@ -57,6 +57,18 @@ class ComicController extends Controller
 
     public function update(Request $request, Comic $comic)
     {
+        $data = $request->validate([
+            'title' => ['required', 'string', Rule::unique('comics')->ignore($comic->id)],
+            'description' => 'nullable|string',
+            'thumb' => 'url:http,https',
+            'price' => 'string|required',
+            'series' => 'string|required',
+            'sale_date' => 'nullable|date',
+            'type' => 'required|string',
+            'artists' => 'required|string',
+            'writers' => 'required|string',
+        ]);
+
         $data = $request->all();
         $comic->update($data);
         return to_route('comics.show', compact('comic'));

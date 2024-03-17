@@ -63,7 +63,8 @@
     height: 100px;
     background-color: #0182F9;
     display: flex;
-    position: sticky;
+    position: relative;
+    z-index: 2;
 
     .info-links {
         display: flex;

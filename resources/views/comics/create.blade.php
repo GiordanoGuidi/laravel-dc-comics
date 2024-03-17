@@ -32,7 +32,7 @@
                     <div class="col-6 p-2">
                         <div class="mb-3">
                             <label for="title" class="form-label">Titolo</label>
-                            <input type="text" name="title" class="form-control" id="title" placeholder="title" value="{{old('title', '')}}">
+                            <input type="text" name="title" class="form-control" id="title" placeholder="title" value="{{old('title')}}">
                         </div>
                     </div>
                     <!--Thumb-->

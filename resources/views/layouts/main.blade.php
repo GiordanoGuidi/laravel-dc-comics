@@ -33,6 +33,6 @@
     </div>
     
     {{--Scripts--}}
-    @yield('scripts')
+    @yield('scr ipts')
 </body>
 </html>
