@@ -43,3 +43,10 @@ footer {
 img {
     max-width: 100%;
 }
+
+#edit-comic,
+#create-comic {
+    position: relative;
+    z-index: 2;
+    background-color: white;
+}
