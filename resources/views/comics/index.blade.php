@@ -7,6 +7,13 @@
 {{--Main--}}
     <!--CARDS-CONTAINER-->
     <div class="comics-container">
+        <div class="small-container py-4">
+            @if (@session('message'))
+                <div class="alert alert-success">
+                    {{session('message')}}
+                </div>
+            @endif
+        </div>
         <section id="comics-list" class="small-container card-container">
             <button class="series">CURRENT SERIES</button>
             <button class="load">LOAD MORE</button>
