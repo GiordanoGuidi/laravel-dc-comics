@@ -25,7 +25,7 @@ class ComicController extends Controller
     // Funzione che mostra pagina per creare Comic
     public function create()
     {
-        return view('comics.create');
+        return view('comics.create', ['comic' => new Comic()]);
     }
 
     public function store(Request $request)

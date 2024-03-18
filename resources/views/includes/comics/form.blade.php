@@ -1,7 +1,14 @@
-<div class="row ">
-    <form class="d-flex flex-wrap" action="{{route('comics.store')}}" method="POST">
-        @csrf
+@if ($comic->exists)
+    {{--Se sono in edit--}}
+    <form class="d-flex flex-wrap" action="{{route('comics.update',$comic->id)}}" method="POST">
         @method('PUT')
+
+@else
+    {{--Se sono in create--}}
+    <form class="d-flex flex-wrap" action="{{route('comics.store')}}" method="POST">
+@endif
+<div class="row ">
+        @csrf
         <!--Title-->
         <div class="col-6 p-2">
             <div class="mb-3">
