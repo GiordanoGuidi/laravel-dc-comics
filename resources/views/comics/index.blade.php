@@ -22,8 +22,16 @@
                         </div>
                         <h3>{{ $comic->series }}</h3>
                     </a>
-                    <!--Bottone per vedere il singolo fumetto-->
-                    <a href="{{route('comics.show', $comic->id)}}" class="btn btn-primary cursor-pointer">Vedi</a>
+                    <div class="d-flex gap-2 justify-content-center">
+                        <!--Bottone per vedere il singolo fumetto-->
+                        <a href="{{route('comics.show', $comic->id)}}" class="btn btn-primary cursor-pointer">Vedi</a>
+                        <!--Bottone per eliminare il fumetto-->
+                        <form action="{{route('comics.destroy',$comic->id)}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <input  type="submit" class="btn btn-danger" value="Elimina"></input>
+                        </form>    
+                    </div>
                 </li>
                 @endforeach
             </ul>
