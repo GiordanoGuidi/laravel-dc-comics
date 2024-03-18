@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreComicRequest;
+use App\Http\Requests\UpdateComicRequest;
 use App\Models\Comic;
 use Illuminate\Http\Request;
 use function Laravel\Prompts\error;
@@ -28,20 +30,9 @@ class ComicController extends Controller
         return view('comics.create', ['comic' => new Comic()]);
     }
 
-    public function store(Request $request)
+    public function store(StoreComicRequest $request)
     {
-        $data = $request->validate([
-            'title' => 'required|string|unique:comics',
-            'description' => 'nullable|string',
-            'thumb' => 'url:http,https',
-            'price' => 'string|required',
-            'series' => 'string|required',
-            'sale_date' => 'nullable|date',
-            'type' => 'required|string',
-            'artists' => 'required|string',
-            'writers' => 'required|string',
-        ]);
-        // $data = $request->all();
+        $data = $request->validated();
         $comic = new Comic();
         $comic->fill($data);
         $comic->save();
@@ -55,21 +46,9 @@ class ComicController extends Controller
         return view('comics.edit', compact('comic'));
     }
 
-    public function update(Request $request, Comic $comic)
+    public function update(UpdateComicRequest $request, Comic $comic)
     {
-        $data = $request->validate([
-            'title' => ['required', 'string', Rule::unique('comics')->ignore($comic->id)],
-            'description' => 'nullable|string',
-            'thumb' => 'url:http,https',
-            'price' => 'string|required',
-            'series' => 'string|required',
-            'sale_date' => 'nullable|date',
-            'type' => 'required|string',
-            'artists' => 'required|string',
-            'writers' => 'required|string',
-        ]);
-
-        $data = $request->all();
+        $data = $request->validated();
         $comic->update($data);
         return to_route('comics.show', compact('comic'));
     }

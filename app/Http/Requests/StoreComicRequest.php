@@ -3,6 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
+
 
 class StoreComicRequest extends FormRequest
 {
@@ -22,7 +24,15 @@ class StoreComicRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title' => 'required|string|unique:comics',
+            'description' => 'nullable|string',
+            'thumb' => 'url:http,https',
+            'price' => 'string|required',
+            'series' => 'string|required',
+            'sale_date' => 'nullable|date',
+            'type' => 'required|string',
+            'artists' => 'required|string',
+            'writers' => 'required|string',
         ];
     }
 }
