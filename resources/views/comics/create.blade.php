@@ -16,7 +16,7 @@
                 </div>
             </div>
             {{--Alert--}}
-           @include('includes.alert')
+           @include('includes.form.alert')
            {{--Form--}}
             @include('includes.comics.form')
         </div>

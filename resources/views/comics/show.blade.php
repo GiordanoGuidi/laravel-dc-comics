@@ -10,6 +10,10 @@
          </div>
       </div>
    </div>
+   <div class="comic-container my-3">
+      {{--Alert message--}}
+      @include('includes.alert')
+   </div>
    <!-- Comic-Details -->
    <section id="comic-details">
       <div class="comic-container">

@@ -37,7 +37,9 @@ class ComicController extends Controller
         $comic->fill($data);
         $comic->save();
 
-        return to_route('comics.show', $comic->id);
+        return to_route('comics.show', $comic->id)
+            ->with('type', 'success')
+            ->with('message', "Fumetto {$comic->title} creato correttamente.");
     }
 
 
@@ -50,12 +52,16 @@ class ComicController extends Controller
     {
         $data = $request->validated();
         $comic->update($data);
-        return to_route('comics.show', compact('comic'));
+        return to_route('comics.show', compact('comic'))
+            ->with('type', 'success')
+            ->with('message', "Fumetto {$comic->title} modificato correttamente.");
     }
 
     public function destroy(Comic $comic)
     {
         $comic->delete();
-        return to_route('comics.index')->with('message', "Fumetto {$comic->title} eliminato correttamente.");
+        return to_route('comics.index')
+            ->with('type', 'success')
+            ->with('message', "Fumetto {$comic->title} eliminato correttamente.");
     }
 }
