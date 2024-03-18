@@ -2,7 +2,6 @@
     {{--Se sono in edit--}}
     <form class="d-flex flex-wrap" action="{{route('comics.update',$comic->id)}}" method="POST">
         @method('PUT')
-
 @else
     {{--Se sono in create--}}
     <form class="d-flex flex-wrap" action="{{route('comics.store')}}" method="POST">
@@ -24,7 +23,7 @@
             </div>
         </div>
         <div class="col-1">
-            <img class="img-fluid" id="preview" src="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=" alt="">
+            <img class="img-fluid" id="preview" src="{{old('thumb',$comic->thumb) ? old('thumb',$comic->thumb) : 'https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM='}}" alt="{{$comic->title}}">
         </div>
         <!--Price-->
         <div class="col-6 p-2">

@@ -15,7 +15,7 @@
       <div class="comic-container">
          <div class="row d-flex gap-40 my-5 flex-nowrap">
             <div class="col-70">
-               <h2>ACTION COMICS #1000: THE DELUXE EDITION</h2>
+               <h2>{{$comic->title}}</h2>
                <!--Availability-Bar-->
                <div class="row availability-bar">
                      <div class="big-col">
