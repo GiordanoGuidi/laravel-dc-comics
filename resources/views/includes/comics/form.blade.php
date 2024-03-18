@@ -1,6 +1,7 @@
 <div class="row ">
     <form class="d-flex flex-wrap" action="{{route('comics.store')}}" method="POST">
         @csrf
+        @method('PUT')
         <!--Title-->
         <div class="col-6 p-2">
             <div class="mb-3">
