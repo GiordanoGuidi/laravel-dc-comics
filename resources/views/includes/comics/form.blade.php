@@ -6,14 +6,14 @@
         <div class="col-6 p-2">
             <div class="mb-3">
                 <label for="title" class="form-label">Titolo</label>
-                <input type="text" name="title" class="form-control" id="title" placeholder="title" value="{{old('title')}}">
+                <input type="text" name="title" class="form-control" id="title" placeholder="title" value="{{old('title',$comic->title)}}">
             </div>
         </div>
         <!--Thumb-->
         <div class="col-5 p-2">
             <div class="mb-3">
                 <label for="thumb" class="form-label">Thumb</label>
-                <input type="text" class="form-control" name="thumb" id="thumb" placeholder="url" value="{{old('thumb', '')}}">
+                <input type="text" class="form-control" name="thumb" id="thumb" placeholder="url" value="{{old('thumb', $comic->thumb)}}">
             </div>
         </div>
         <div class="col-1">
@@ -23,49 +23,49 @@
         <div class="col-6 p-2">
             <div class="mb-3">
                 <label for="price" class="form-label">Price</label>
-                <input type="text" class="form-control" name="price" id="price" placeholder="$" value="{{old('price', '')}}">    
+                <input type="text" class="form-control" name="price" id="price" placeholder="$" value="{{old('price', $comic->price)}}">    
             </div>
         </div>
         <!--Series-->
         <div class="col-6 p-2">
             <div class="mb-3">
                 <label for="series" class="form-label">Series</label>
-                <input type="text" class="form-control" name="series" id="series" placeholder="series" value="{{old('series', '')}}">    
+                <input type="text" class="form-control" name="series" id="series" placeholder="series" value="{{old('series', $comic->series)}}">    
             </div>
         </div>
         <!--Sale Date-->
         <div class="col-6 p-2">
             <div class="mb-3">
                 <label for="sale_date" class="form-label">Sale Date</label>
-                <input type="date" class="form-control" name="date" id="sale_date" placeholder="Date" value="{{old('sale_date', '')}}">    
+                <input type="date" class="form-control" name="date" id="sale_date" placeholder="Date" value="{{old('sale_date', $comic->sale_date)}}">    
             </div>
         </div>
         <!--Type-->
         <div class="col-6 p-2">
             <div class="mb-3">
                 <label for="type" class="form-label">Type</label>
-                <input type="text" class="form-control" name="type" id="type" placeholder="Type" value="{{old('type', '')}}">    
+                <input type="text" class="form-control" name="type" id="type" placeholder="Type" value="{{old('type', $comic->type)}}">    
             </div>
         </div>
         <!--Writers-->
         <div class="col-6 p-2">
             <div class="mb-3">
                 <label for="writers" class="form-label">Writers</label>
-                <input type="text" class="form-control" name="writers" id="writers" placeholder="writers" value="{{old('writers', '')}}">    
+                <input type="text" class="form-control" name="writers" id="writers" placeholder="writers" value="{{old('writers', $comic->writers)}}">    
             </div>
         </div>
         <!--Artists-->
         <div class="col-6 p-2">
             <div class="mb-3">
                 <label for="artists" class="form-label">Artists</label>
-                <input type="text" class="form-control" name="artists" id="artists" placeholder="artists" value="{{old('artists', '')}}">    
+                <input type="text" class="form-control" name="artists" id="artists" placeholder="artists" value="{{old('artists', $comic->artists)}}">    
             </div>
         </div>
         <!--Description-->
         <div class="col-12">
             <div class="mb-3">
               <label for="description" class="form-label">Description</label>
-              <textarea class="form-control" name="description" id="description" rows="3">{{old('description', '')}}</textarea>
+              <textarea class="form-control" name="description" id="description" rows="3">{{old('description', $comic->description)}}</textarea>
             </div>
         </div>
         <div class="col-12">

@@ -42,9 +42,19 @@
                <img src="{{Vite::asset('resources/img/adv.jpg')}}" alt="">
             </div>
          </div>
-         <div class="d-flex justify-content-center gap-3 mb-3">
-            <a href="{{route('comics.edit',$comic->id)}}" class="btn btn-warning cursor pointer">Modifica</a>
-            <a href="{{route('comics.index')}}" class="btn btn-secondary cursor-pointer">Torna indietro</a>
+         <div class="d-flex  gap-5 mb-3">
+            <!--Bottone per tornare alla lista-->
+            <a href="{{route('comics.index')}}" class="btn btn-secondary cursor-pointer align-self-start">Torna indietro</a>
+            <div class="d-flex ms-5 gap-3">
+               <!--Bottone per modificare il fumetto-->
+               <a href="{{route('comics.edit',$comic->id)}}" class="btn btn-warning cursor pointer">Modifica</a>
+               <!--Bottone per eliminare il fumetto-->
+               <form action="{{route('comics.destroy',$comic->id)}}" method="POST">
+                  @csrf
+                  @method('DELETE')
+                  <input  type="submit" class="btn btn-danger" value="Elimina"></input>
+              </form>    
+            </div>
          </div>
       </div>
    </section>

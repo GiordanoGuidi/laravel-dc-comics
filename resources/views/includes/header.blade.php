@@ -11,7 +11,7 @@
         <ul class="links-list mb-0">
             @foreach(config('header_links') as $link)
             <li @if(Request::is($link['text'] . '*')) class="active" @endif>
-                <a href="{{$link['text']}}">
+                <a href="/{{$link['text']}}">
                     {{strtoupper($link['text'])}}</a>
                 </li>
         @endforeach
